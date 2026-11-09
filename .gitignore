@@ -1,24 +1,75 @@
-# Logs
-logs
-*.log
+# ============================================================================
+# CleanSpot – .gitignore for Flutter, Dart, and Web Projects
+# ============================================================================
+
+# ----------------------------------------------------
+# Environment & Secrets (NEVER COMMIT CREDENTIALS)
+# ----------------------------------------------------
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.keystore
+*.jks
+
+# ----------------------------------------------------
+# Unrelated Projects & Deployments in Workspace
+# ----------------------------------------------------
+personal-expense-tracker/
+.firebase/
+.firebaserc
+firebase.json
+
+# ----------------------------------------------------
+# Dart & Flutter Artifacts
+# ----------------------------------------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.iml
+.metadata
+
+# Symbol processing & symbols
+app.*.symbols
+app.*.map.json
+
+# Flutter Web & Node
+dist/
+dist-ssr/
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
+# ----------------------------------------------------
+# IDE & System Files
+# ----------------------------------------------------
+.vscode/
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+.DS_Store
+Thumbs.db
+*.local
+
+# ----------------------------------------------------
+# Android & iOS Ephemeral Files
+# ----------------------------------------------------
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/key.properties
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/flutter_assets/
+ios/ServiceDefinitions.json
